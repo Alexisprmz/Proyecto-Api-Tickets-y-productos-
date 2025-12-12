@@ -1,6 +1,18 @@
 # API Tickets y Productos - Backend .NET
 
-Sistema de gestión de tickets de compra y productos desarrollado con **ASP.NET Core 8.0**. Permite autenticación JWT, CRUD completo de productos (rol admin) y generación/consulta de tickets con cálculo automático de IVA 16%.
+## Descripción del Proyecto
+
+**API Tickets y Productos** es una Plataforma Web API desarrollada con **ASP.NET Core 8.0** diseñada para automatizar la gestión completa de inventario de productos y generación de tickets de venta con cálculo automático de impuestos (IVA 16%).
+
+**Propósito principal:** Solucionar el problema de registro manual de productos y cálculo de totales de venta, optimizando la rentabilidad, reduciendo errores humanos y proporcionando trazabilidad completa de transacciones. Ideal para sistemas de punto de venta, tiendas pequeñas/medianas y control de inventario.[file:9]
+
+**Funcionalidades clave:**
+- ✅ Autenticación JWT segura (admin/Admin123)
+- ✅ CRUD completo de productos con validación FluentValidation
+- ✅ Generación automática de tickets con algoritmo: validación stock → actualización inventario → cálculo subtotal + IVA 16% → código único TKT-XXXX
+- ✅ Historial completo y detalle de tickets
+- ✅ Respuestas JSON mejoradas (actualizar/eliminar devuelven datos)
+
 
 ##  Video Demostrativo
 
