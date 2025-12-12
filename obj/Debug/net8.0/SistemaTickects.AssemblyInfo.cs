@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaTickects")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a8e21dbdcb90b3f205b73d5392bc7eeeb19ccb5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb40ba85391e064fdafa68f49fcd974b15b2a794")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaTickects")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaTickects")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
