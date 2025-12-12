@@ -1,6 +1,6 @@
 # API Tickets y Productos - Backend .NET
 
-Sistema de gestión de tickets de compra y productos desarrollado con **ASP.NET Core 8.0**. Permite autenticación JWT, CRUD completo de productos (rol admin) y generación/consulta de tickets con cálculo automático de IVA 16%.[file:9]
+Sistema de gestión de tickets de compra y productos desarrollado con **ASP.NET Core 8.0**. Permite autenticación JWT, CRUD completo de productos (rol admin) y generación/consulta de tickets con cálculo automático de IVA 16%.
 
 ##  Video Demostrativo
 
@@ -12,13 +12,13 @@ En este video se demuestra el funcionamiento de los **7 endpoints principales y 
 
 | # | Endpoint | Descripción |
 |---|----------|-------------|
-| 1 | `POST /api/Auth/login` | Autenticación JWT admin/Admin123 |[file:2]
-| 2 | `GET /api/Products` | Listado completo de productos (rol admin) |[file:3]
-| 3 | `POST /api/Products` | Crear producto con validación FluentValidation |[file:3]
-| 4 | `PUT /api/Products/{id}` | Actualizar producto (JSON mejorado) |[file:3]
-| 5 | `GET /api/Products/{id}` | Detalle específico de producto |[file:3]
-| 6 | `POST /api/Tickets` | **Generar ticket** (validación stock, IVA 16%, código único) |[file:1]
-| 7 | `GET /api/Tickets` + `GET /api/Tickets/{id}` | Historial y detalle completo |[file:1]
+| 1 | `POST /api/Auth/login` | Autenticación JWT admin/Admin123 |
+| 2 | `GET /api/Products` | Listado completo de productos (rol admin) |
+| 3 | `POST /api/Products` | Crear producto con validación FluentValidation |
+| 4 | `PUT /api/Products/{id}` | Actualizar producto (JSON mejorado) |
+| 5 | `GET /api/Products/{id}` | Detalle específico de producto |
+| 6 | `POST /api/Tickets` | **Generar ticket** (validación stock, IVA 16%, código único) |
+| 7 | `GET /api/Tickets` + `GET /api/Tickets/{id}` | Historial y detalle completo |
 
 ---
 
@@ -41,12 +41,12 @@ La colección incluye **todos los endpoints** organizados.
 
 | Tecnología | Versión | Uso |
 |------------|---------|-----|
-| ASP.NET Core | 8.0 | API REST |[file:21]
-| Entity Framework Core | 8.0 | ORM SQL Server |[file:8]
-| FluentValidation | 11.0+ | Validación DTOs |[file:3]
-| JWT Bearer | 8.0 | Autenticación |[file:17]
-| Swagger | 6.0+ | Documentación |[file:21]
-| Docker | 3.8+ | Contenedores |[file:9]
+| ASP.NET Core | 8.0 | API REST |
+| Entity Framework Core | 8.0 | ORM SQL Server |
+| FluentValidation | 11.0+ | Validación DTOs |
+| JWT Bearer | 8.0 | Autenticación |
+| Swagger | 6.0+ | Documentación |
+| Docker | 3.8+ | Contenedores |
 
 ---
 
@@ -63,7 +63,7 @@ git --version
 
 ---
 
-## 🚀 Instalación Manual (Sin Docker)
+## Instalación Manual (Sin Docker)
 1. Clonar repositorio
 git clone TU_REPOSITORIO_URL
 cd tu-proyecto
@@ -97,7 +97,7 @@ API: http://localhost:{PUERTO}
 Swagger: http://localhost:{PUERTO}/swagger
 
 
-**Admin:** `admin` / `Admin123` [file:2]
+**Admin:** `admin` / `Admin123` 
 
 ---
 
@@ -113,24 +113,20 @@ Swagger: http://localhost:{PUERTO}/swagger
 "password": "Admin123"
 }
 
-[file:2]
-
 ---
 
 ## Endpoints Principales
 
 ###  `POST /api/Auth/login`
 { "username": "admin", "password": "Admin123" }
-**Response:** `{ "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." }` [file:2]
+**Response:** `{ "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." }` 
 
 ### `GET /api/Products`
 **Headers:** `Authorization: Bearer {token}`
-**Response:** `[{ "id": 1, "nombre": "Hamburguesa", "precio": 89.50, "stock": 100 }]` [file:3]
+**Response:** `[{ "id": 1, "nombre": "Hamburguesa", "precio": 89.50, "stock": 100 }]` 
 
 ### `POST /api/Products`
 { "nombre": "Chetos", "precio": 20.50, "stock": 100 }
-
-[file:3]
 
 ### `PUT /api/Products/{id}`
 **Response mejorada:**
@@ -138,8 +134,6 @@ Swagger: http://localhost:{PUERTO}/swagger
 "message": "Producto actualizado",
 "product": { "id": 1, "nombre": "Doritos", ... }
 }
-
-[file:3]
 
 ### `POST /api/Tickets` **(Algorítmico)**
 [
@@ -156,10 +150,8 @@ Swagger: http://localhost:{PUERTO}/swagger
 }
 }
 
-[file:1]
-
-### 🔒 `GET /api/Tickets` | `GET /api/Tickets/{id}`
-**Historial y detalles completos** [file:1]
+### `GET /api/Tickets` | `GET /api/Tickets/{id}`
+**Historial y detalles completos** 
 
 ---
 
@@ -167,9 +159,9 @@ Swagger: http://localhost:{PUERTO}/swagger
 
 | Entidad | Campos Principales |
 |---------|-------------------|
-| **Product** | `Id`, `Nombre`, `Precio`, `Stock` [file:22] |
-| **Ticket** | `Id`, `Codigo`, `Fecha`, `Subtotal`, `IVA`, `Total`, `Estado` [file:12] |
-| **TicketDetalle** | `TicketId`, `ProductoId`, `Cantidad`, `Precio`, `Total` [file:11] |
+| **Product** | `Id`, `Nombre`, `Precio`, `Stock`  |
+| **Ticket** | `Id`, `Codigo`, `Fecha`, `Subtotal`, `IVA`, `Total`, `Estado`  |
+| **TicketDetalle** | `TicketId`, `ProductoId`, `Cantidad`, `Precio`, `Total`  |
 
 ---
 
